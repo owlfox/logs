@@ -1,0 +1,10 @@
+build/
+.vscode
+cmake-build-debug/
+.idea
+*.swp
+a.out
+.DS_STORE
+
+#local cmake install https://cmake.org/install/
+cmake-*
