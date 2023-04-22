@@ -1,0 +1,4 @@
+site_name: My Docs
+nav:
+    - "5.OpenMP": ch5_OpenMP.md
+theme: readthedocs
