@@ -18,8 +18,12 @@ void Hello(void);  /* Thread function */
 
 /*--------------------------------------------------------------------*/
 int main(int argc, char* argv[]) {
-   int thread_count = strtol(argv[1], NULL, 10); 
-
+   
+   int thread_count = argc == 2 ? strtol(argv[1], NULL, 10): 4; 
+   
+   if (thread_count < 0 || thread_count > 1024) {
+      thread_count = 4;
+   }
 #  pragma omp parallel num_threads(thread_count) 
    Hello();
 
